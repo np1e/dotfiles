@@ -26,11 +26,11 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
-# set appearance of new windows when splitting
+" set appearance of new windows when splitting
 set splitbelow
 set splitright
 
-# remap navigation between split windows
+" remap navigation between split windows
 nnoremap <C-W><Down> <C-W><C-J>
 nnoremap <C-W><Up> <C-W><C-K>
 nnoremap <C-W><Right> <C-W><C-L>
