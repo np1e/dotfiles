@@ -79,14 +79,15 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git pip npm common-aliases history ssh-agent)
 
-zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plguins:ssh-agent identities id_rsa workstation
-
 source $ZSH/oh-my-zsh.sh
+
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+
+# zstyle :omz:plugins:ssh-agent agent-forwarding on
+# zstyle :omz:plguins:ssh-agent identities id_rsa workstation
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
