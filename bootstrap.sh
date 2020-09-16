@@ -1,3 +1,5 @@
+#!/bin/bash
+
 git pull origin master;
 
 function doIt () {
@@ -8,15 +10,15 @@ function doIt () {
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
-	source $HOME/.zshrc;
+	exec zsh -l;
 }
 
 if [[ "$1" == "--force" || "$1" == "-f" ]]; then
 	doIt;
 else
-	read "reply?This may overwrite existing files in your home directory. Are you sure? (y/n) ";
+	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
 	echo "";
-	if [[ $reply =~ ^[Yy]$ ]]; then
+	if [[ $REPLY =~ ^[Yy]$ ]]; then
 		doIt;
 	fi;
 fi;
