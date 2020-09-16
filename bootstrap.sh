@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/zsh
 
-git pull origin master;
+git pull origin master
 
 function doIt () {
 	rsync --exclude ".git/" \
@@ -9,17 +9,18 @@ function doIt () {
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
-		-avh --no-perms . ~;
-	exec zsh -l;
+		-avh --no-perms . ~
+	source ~/.zshrc
 }
 
 if [[ "$1" == "--force" || "$1" == "-f" ]]; then
-	doIt;
+	doIt
 else
-	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
-	echo "";
+	read "REPLY?This may overwrite existing files in your home directory. Are you sure? (y/n) "
+	echo ""
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
-		doIt;
-	fi;
-fi;
-unset doIt;
+		doIt
+	fi
+fi
+unset doIt
+exec zsh -l
