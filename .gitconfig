@@ -1,0 +1,8 @@
+[user]
+	email = mail@nhafkemeyer.com
+	name = Nick Hafkemeyer
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore_global
+[commit]
+    template = ~/.gitmessage.txt

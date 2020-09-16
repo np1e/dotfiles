@@ -1,0 +1,9 @@
+[type]: [subject] (max. 50 characters)
+
+(optional) Because:
+- reason1
+- reason2
+- each line less than 72 characters
+
+Optionally in-depth explanation of what was done in this commit.
+Wrap each line at 72 characters!
