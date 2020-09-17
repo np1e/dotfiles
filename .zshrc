@@ -1,3 +1,6 @@
+# zstyle :omz:plugins:ssh-agent agent-forwarding on
+# zstyle :omz:plguins:ssh-agent identities id_rsa workstation
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -81,13 +84,7 @@ plugins=(git pip npm common-aliases history ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
-
 # User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# zstyle :omz:plugins:ssh-agent agent-forwarding on
-# zstyle :omz:plguins:ssh-agent identities id_rsa workstation
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
