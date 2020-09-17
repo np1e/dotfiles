@@ -23,4 +23,3 @@ else
 	fi
 fi
 unset doIt
-exec zsh -l
